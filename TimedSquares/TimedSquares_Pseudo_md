@@ -1,0 +1,44 @@
+# Planning timed squares
+
+Up to six squares can appear  from the top of the screen, each occupying a pre-set lane.
+
+All squares in a wave take on a colour.
+
+Each wave has a colour different from that before or after.
+
+They aren't visible, then they are, then they aren't.
+
+The gaps between waves differs.
+
+if time, add a tween with dotween free.
+
+For demo have: 4 waves, 4 colours.
+
+Program TimedSquares
+
+We have: a collection of waves
+lane for squares to start, each with an id
+A wave is: A colour, a delay, a collection of square ids.
+
+number of waves = 4;
+count = 0;
+for each wave in waves
+  wait for wave's delay
+  set all squares invisible
+  if using twween:
+    move squares to above screen with an offset 
+    set square colours
+    make identified squares visible
+    slide them down to location of waves in lanes.
+    
+  else
+    set the square colours
+    set the identified squares to visible
+
+
+A wave manager knows the lanes, holds the squares.
+Maybe squares have an appear and disappear function, using tween if that suits them.
+delay has to be at least as long as square slide time.
+
+  
+
