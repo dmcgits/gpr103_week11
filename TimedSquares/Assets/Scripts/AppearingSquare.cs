@@ -20,18 +20,13 @@ public class AppearingSquare : MonoBehaviour
     _spriteRenderer.color = color;
   }
 
-  // Update is called once per frame
-  void Update()
-  {
-
-  }
-
   public void Appear()
   {
-    transform.position.Set( transform.position.x, 6.0f, 0.0f);
-    Debug.Log("Trying to appear in lane " + (int)Lane);
+    // transform.position.Set( transform.position.x, 6.0f, 0.0f);
+    //Debug.Log("Trying to appear in lane " + (int)Lane);
     _spriteRenderer.enabled = true;
     transform.DOMoveY(6.0f, 0.2f).From();
+   
   }
 
   public void Disappear()
